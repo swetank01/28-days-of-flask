@@ -12,4 +12,17 @@ Chapter 5: Testing in Flask
 
 Chapter 6: Deploying Flask Applications
 
-Chapter 7: Monitoring Flask Applications
+Chapter 7: Monitoring Flask 
+
+# Flask Setup
+
+```
+python3 -m venv env
+source env/bin/activate
+pip3 install flask
+pip3 freeze > requirements.txt 
+```
+
+## Docker 
+
+docker-compose up -d --build

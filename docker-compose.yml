@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  flask-28:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python main.py
+    ports:
+      - 9100:5000
+    volumes:
+      - .:/app
