@@ -26,3 +26,19 @@ pip3 freeze > requirements.txt
 ## Docker 
 
 docker-compose up -d --build
+
+
+## Rest API
+
+| Verb        |  CRUD       |   Operation     |   Safe   |   Idempotent   |
+| :---        |    :----:   |          ---:   |  :----:  |      :----:    |   
+| GET         | -           | -               |    YES   |                |
+| POST        | -           | -               |    NO    |                |
+| PUT         | -           | -               |    NO    |                |
+| DELETE      | -           | -               |          |                |
+| OPTIONS     | -           | -               |          |                |
+
+
+## MYSQL SETUP
+
+pip install flask-sqlalchemy pymysql
