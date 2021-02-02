@@ -42,3 +42,22 @@ docker-compose up -d --build
 ## MYSQL SETUP
 
 pip install flask-sqlalchemy pymysql
+
+
+### 2.1 Mysql : Creating an Author Database
+
+We’ll now create an author database application which will provide RESTfulCRUDAPIs.Alltheauthorswillbestoredinatabletitled“authors”.
+After the declared db object, add the following lines of code to declare a class as Authors which will hold the schema for the author table:
+
+```
+class Author (db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20))
+    specialisation = db.Column(db.String(50))
+    def __init__(self, name, specialisation):
+        self.name = name
+        self.specialisation = specialisation
+    def __repr__(self):
+      return '<Product %d>' % self.id
+db.create_all()
+```

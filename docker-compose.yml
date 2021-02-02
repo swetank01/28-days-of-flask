@@ -25,3 +25,12 @@ services:
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'flask'
       MYSQL_ROOT_PASSWORD: 'root'
+
+  adminer:
+    image: adminer:latest
+    environment:
+      ADMINER_DEFAULT_SERVER: mysql
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
