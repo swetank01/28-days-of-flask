@@ -44,5 +44,23 @@ class TeamSchema(ModelSchema):
     role = fields.String(required=True)
     experience = fields.Number(required=True)
 
+###  POST - Create Team  ###
+@app.route('/team', methods = ['POST'])
+def add_team_members():
+    data = request.get_json()
+    team_schema = TeamSchema()
+    team = team_schema.load(data)
+    result = team_schema.dump(team.create()).data
+    return make_response(jsonify({"members": team}),201)
+
+###  GET Team Members  ###
+@app.route('/team', methods = ['GET'])
+def index():
+    get_members = Team.query.all()
+    team_schema = TeamSchema(many=True)
+    team_members = team_schema.dump(get_members)
+    return make_response(jsonify({"Members": team_members}))
+
+
 if __name__== '__main__':
       app.run(host='0.0.0.0')
