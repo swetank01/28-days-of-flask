@@ -19,7 +19,7 @@ services:
     ports:
       - '33066:3306'
     volumes:
-      - .mysql_dbdata:/var/lib/mysql
+      - .mysql_volume:/var/lib/mysql
     environment:
       MYSQL_DATABASE: 'admin'
       MYSQL_USER: 'user'
