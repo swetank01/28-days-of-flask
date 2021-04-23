@@ -1,1 +1,4 @@
 env/
+*.mysql_volume/
+*.DS_Store
+.mysql_volume/

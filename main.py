@@ -62,5 +62,9 @@ def index():
     return make_response(jsonify({"Members": team_members}))
 
 
+###  GET Team Members  ###
+#@app.route('/', methods = ['GET'])
+#    return "hello Flask!!!"
+
 if __name__== '__main__':
       app.run(host='0.0.0.0')

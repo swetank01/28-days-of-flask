@@ -1,3 +1,5 @@
 docker-compose.yml
 Dockerfile
 backup.py
+.mysql_volume/
+*DS_Store
