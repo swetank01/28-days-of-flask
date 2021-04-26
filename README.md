@@ -61,15 +61,5 @@ class Author (db.Model):
       return '<Product %d>' % self.id
 db.create_all()
 ```
-
-
-
-
-
-
-
-
-
-
 # Issues 
 1. mysql wait is not added
